@@ -46,7 +46,7 @@ run/test/0 :
 run/test/constant :
 -----------------
          
-- Subdirectory "polyMesh" : full description of the case mesh. The geometry is a cube with a rectilinear grid.
+- Subdirectory "polyMesh" : full description of the case mesh. The geometry is a cube with a rectilinear grid. It represents the capillary bed that is considered as a porous medium.
 - File "transportProperties" : specifies physical properties for the application "brainFlow".
 
 
