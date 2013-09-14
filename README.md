@@ -7,6 +7,8 @@ This project aims at calculating blood flow in the cerebral circulation. Since b
 
 The porous network model provides us with a throughput that is directly injected into the homogeneous medium at the junctions with the bigger vessels. However, the pressure computed following this injection varies with the mesh size and is not representative of the real pressure that is imposed on the tip of the vessel. Accounting for this approximation error required to develop a specific “well-model” (word used here by analogy with a nearly similar mathematical problem found in reservoir engineering).
 
+Cf. the joined pdf file for further information and illustrations.
+
 
 About OpenFOAM :
 ===============
