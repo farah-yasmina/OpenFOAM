@@ -3,7 +3,12 @@ OpenFOAM
 
 Files coded during the internship at Institut de Mécanique des Fluides de Toulouse
 
-This project aims at calculating blood flow in the cerebral circulation. 
+This project aims at calculating blood flow in the cerebral circulation. Since blood vessels in the brain are of varying diameters, two different models, based on two different characteristic dimensions, underpin this new model. On the one hand, big vessels like arteries, veins, arterioles and venules are represented as a porous network where the flow of blood answers to the Hagen-Poiseuille equation, which relates the flow rate to the differential pressure in a cylindrical pipe. On the other hand, the capillary bed is represented as a continuum, and is considered homogeneous on the Darcy scale. Blood flow in the capillary bed thus follows Darcy's law, which relates the instantaneous discharge rate to the differential pressure over a given distance.
+
+The porous network model provides us with a throughput that is directly injected into the homogeneous medium at the junctions with the bigger vessels. However, the pressure computed following this injection varies with the mesh size and is not representative of the real pressure that is imposed on the tip of the vessel. Accounting for this approximation error required to develop a specific “well-model” (word used here by analogy with a nearly similar mathematical problem found in reservoir engineering).
+
+Cf. the joined pdf file (Info.pdf) for further information and illustrations.
+
 
 About OpenFOAM :
 ===============
@@ -46,7 +51,7 @@ run/test/0 :
 run/test/constant :
 -----------------
          
-- Subdirectory "polyMesh" : full description of the case mesh. The geometry is a cube with a rectilinear grid.
+- Subdirectory "polyMesh" : full description of the case mesh. The geometry is a cube with a rectilinear grid. It represents the capillary bed that is considered as a porous medium.
 - File "transportProperties" : specifies physical properties for the application "brainFlow".
 
 
