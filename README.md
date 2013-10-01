@@ -23,20 +23,20 @@ Directory structure :
 - run : contains the desired cases on which to run the application ("test" here).
 
 
-brainFlow/brainFlow.C :
+solver/brainFlow/brainFlow.C :
 ----------------------
 
 - Calculates blood pressure and flow in a cerebral vascular network.
 - An applied example with one artery and one vein in a capillary network.
           
           
-brainFlow/createFields.H :
+solver/brainFlow/createFields.H :
 ------------------------
           
 - The code for creating fields and reading field input data.
           
           
-brainFlow/Vessels.C & Vessels.H :
+solver/brainFlow/Vessels.C & Vessels.H :
 -------------------------------
           
 - Class of object "Vessel". Calculates blood flow & pressure distribution by applying a well model for arteries and veins.
